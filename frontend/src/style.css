@@ -1,0 +1,103 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #f7f7e6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #141525;
+  color: white;
+}
+
+.topnav a:hover {
+  opacity: .6;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container a {
+  padding-right: 6px;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #f5d45e;
+}
+
+.movieBox {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem auto;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #141525;
+  padding: 1rem;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px 1px #6f6e6e;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #323451;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: small;
+}
+
+.addMovie,
+.footer {
+  background: #141525;
+  color: white;
+}
+
+.addMovie form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  max-width: 400px;
+  margin: auto;
+  gap: 8px;
+}
+
+.addMovie button {
+  cursor: pointer;
+  padding: .4rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.nan {
+  text-align: center;
+  padding: 2rem 1rem;
+}
