@@ -2,14 +2,14 @@ const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 const {graphqlHTTP} = require("express-graphql")
-const movieSchema = require("./schema/schema")
-const resolver = require("./resolver/resolver")
+const movieSchema = require("../schema/schema")
+const resolver = require("../resolver/resolver")
 const cors = require("cors")
 
-app.use(cors({origin: "http://localhost:3000", credentials: true}))
+app.use(cors())
 
 
-mongoose.connect("mongodb+srv://admin:admin@cluster0.hb3xa.mongodb.net/moviemaker?retryWrites=true&w=majority", {})
+mongoose.connect(process.env.MOVIEMAKER_MONGODB_URI, {})
 .then(() => console.log("Mongodb connected"))
 .catch((err) => console.log("Error", err))
 
@@ -25,9 +25,4 @@ app.get("/", (req, res) => {
   res.send("Hello from backend")
 })
 
-app.listen(4000, () => {
-  console.log("Server on 4000");
-  
-})
-
-module.export = app
+module.exports = app
