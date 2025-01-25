@@ -6,7 +6,10 @@ const movieSchema = require("../schema/schema")
 const resolver = require("../resolver/resolver")
 const cors = require("cors")
 
-app.use(cors())
+app.use(cors({
+  origin: "https://moviemaker-woad.vercel.app", // Replace with your actual frontend URL
+  credentials: true,
+}))
 
 
 mongoose.connect(process.env.MOVIEMAKER_MONGODB_URI, {})
@@ -16,7 +19,7 @@ mongoose.connect(process.env.MOVIEMAKER_MONGODB_URI, {})
 
 app.use("/graphql", graphqlHTTP({
   schema: movieSchema, 
-  graphiql: true,
+  graphiql: false,
   rootValue: resolver
 }))
 
@@ -24,5 +27,6 @@ app.use("/graphql", graphqlHTTP({
 app.get("/", (req, res) => {
   res.send("Hello from backend")
 })
+
 
 module.exports = app

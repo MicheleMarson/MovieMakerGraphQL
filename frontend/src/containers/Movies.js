@@ -18,7 +18,10 @@ const Movies = () => {
 
   if (loading) return <p className='nan'>Loading...</p>;
   if (error) return <p className='nan'>Error: {error.message}</p>;
-  if(movies.length === 0) return <p className='nan'>No data</p>
+  if(movies.length === 0){
+    setLoading(false)
+    return <p className='nan'>No data...</p>;
+  }
 
   return (
     <div className="movieBox">

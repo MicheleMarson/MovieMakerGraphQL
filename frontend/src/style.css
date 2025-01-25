@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: #f7f7e6;
+  background-color: #141525;
 }
 
 a {
@@ -40,10 +40,11 @@ a {
 .movieBox {
   display: grid;
   gap: 1rem;
-  margin: 2rem auto;
+  padding: 3rem 1rem;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   max-width: 1000px;
-  padding: 0 1rem;
+  padding: 3rem 1rem;
+  background: aliceblue;
 }
 
 .card {
@@ -100,4 +101,5 @@ img {
 .nan {
   text-align: center;
   padding: 2rem 1rem;
+  color: #797a7b;
 }
