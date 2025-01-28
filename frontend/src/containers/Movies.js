@@ -24,10 +24,12 @@ const Movies = () => {
   }
 
   return (
-    <div className="movieBox">
-      {movies.map((movie) => (
-        <Movie key={movie.name} name={movie.name} genre={movie.genre} year={movie.year} url={movie.url}/>
-      ))}
+    <div className='container'>
+      <div className="movieBox">
+        {movies.map((movie) => (
+          <Movie key={movie.name} name={movie.name} genre={movie.genre} year={movie.year} url={movie.url}/>
+        ))}
+      </div>
     </div>
   );
 };

@@ -37,6 +37,10 @@ a {
   color: #f5d45e;
 }
 
+.container {
+  background: aliceblue;
+}
+
 .movieBox {
   display: grid;
   gap: 1rem;
@@ -45,6 +49,7 @@ a {
   max-width: 1000px;
   padding: 3rem 1rem;
   background: aliceblue;
+  margin: auto;
 }
 
 .card {
